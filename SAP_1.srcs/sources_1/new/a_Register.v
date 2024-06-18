@@ -33,22 +33,25 @@ module a_Register(
     output [7:0]o_Reg_out
 
     );
+    //create internal storage register
     reg [7:0] reg_a = 8'hFF;
         
     always @(posedge i_clk or posedge i_rst) begin
         if (i_rst == 1'b1)begin
             reg_a <= 8'b0;
         end else begin
+            //if load is high reg a = the w_bus
             if (i_load == 1'b1)begin
                 reg_a <= i_bus;
             end
+            //if enable is high output the contents of reg_a onto w_bus
             if (i_en == 1'b1)begin
                 o_bus <= reg_a;
             end
         end 
         
     end
-
+    //out goes to ALU
     assign o_Reg_out = reg_a;
     
 endmodule
