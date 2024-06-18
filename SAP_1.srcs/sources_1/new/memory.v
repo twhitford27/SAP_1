@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 18.06.2024 20:13:11
+// Create Date: 18.06.2024 22:42:36
 // Design Name: 
-// Module Name: b_Register
+// Module Name: memory
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,36 +20,43 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module b_Register(
+module memory(
     //inputs
     input i_clk,
     input i_rst,
     input i_load,
     input [7:0] i_bus,
+    
     //outputs
-    output [7:0] o_Reg_out
+    output [7:0] o_bus
     );
 
-    reg [7:0] reg_b;
+    initial begin
+        $readmemh("program.mem",r_ram);
+    end
 
-    always @(posedge i_clk or posedge i_rst) begin
-        if (i_rst == 1'b1)begin
-            reg_b <= 8'b0;
+    reg [3:0] r_mar;
+    reg [7:0] r_ram[0:15];
+
+    always @(posedge i_clk, posedge i_rst) begin
+        if (i_rst == 1'b1 )begin
+            r_mar <= 4'b0;
         end else if (i_load == 1'b1)begin
-            reg_b <= i_bus;
+            r_mar <= i_bus[3:0];
         end
         
     end
 
-    assign o_Reg_out = reg_b;
+
+    assign o_bus = r_ram[r_mar];
 
     //template
-    // b_Register(
+    // memory(
     //     .i_clk(),
     //     .i_rst(),
     //     .i_load(),
     //     .i_bus(),
-    //     .o_Reg_out()
+    //     .o_bus()
     // )
-    
+
 endmodule

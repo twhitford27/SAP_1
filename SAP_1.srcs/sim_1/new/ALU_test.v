@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU_tb(
+module ALU_test(
 
     );
 
-    reg [7:0] A; // 2-bit input A
-    reg [7:0] B; // 2-bit input B
+    reg [7:0] A; // 8-bit input A
+    reg [7:0] B; // 8-bit input B
     reg sub = 1'b0;
-    wire [7:0] Sum; // 3-bit output Sum
+    wire [7:0] Sum; // 8-bit output Sum
     
     // Instantiate the two_bit_adder module
     ALU uut (

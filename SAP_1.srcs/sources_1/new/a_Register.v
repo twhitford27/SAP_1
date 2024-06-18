@@ -54,4 +54,16 @@ module a_Register(
     //out goes to ALU
     assign o_Reg_out = reg_a;
     
+
+    //template
+    // a_Register(
+    //     .i_clk(),
+    //     .i_rst(),
+    //     .i_en(),
+    //     .i_load(),
+    //     .i_bus(),
+    //     .o_bus(),
+    //     .o_Reg_out()
+    // )
+
 endmodule
