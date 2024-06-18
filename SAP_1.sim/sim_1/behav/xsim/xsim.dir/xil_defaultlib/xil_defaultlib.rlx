@@ -3,10 +3,9 @@
 Oct 13 2023
 20:47:58
 D:/FPGA_Projects/SAP_1/SAP_1.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-,,,,,,,,,,,,,,
 D:/FPGA_Projects/SAP_1/SAP_1.srcs/sim_1/new/a_reg_tb.v,1718736503,verilog,,,,a_reg_tb,,,,,,,,
 D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/ALU.v,1718741570,verilog,,D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/Clock.v,,ALU,,,,,,,,
 D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/Clock.v,1718746499,verilog,,D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/a_Register.v,,Clock,,,,,,,,
 D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/a_Register.v,1718746828,verilog,,D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/b_Register.v,,a_Register,,,,,,,,
-D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/memory.v,1718749107,verilog,,D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/memory_tb.v,,memory,,,,,,,,
-,,,,,,memory_tb,,,,,,,,
+D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/memory.v,1718750276,verilog,,D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/memory_tb.v,,memory,,,,,,,,
+D:/FPGA_Projects/SAP_1/SAP_1.srcs/sources_1/new/memory_tb.v,1718751518,verilog,,,,memory_tb,,,,,,,,

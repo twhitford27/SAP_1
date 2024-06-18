@@ -51,5 +51,10 @@ module memory_tb(
         i_rst = 1'b1;
         #10
         i_rst = 1'b0;
+        #(2*41.667)
+        i_load = 1'b1;
+        i_bus = 8'b10100011;
+        
+        
     end
 endmodule
