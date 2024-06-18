@@ -26,11 +26,29 @@ module a_Register(
     input i_rst,
     input i_en,
     input i_load,
-    input [7:0]i_w_bus,
+    input [7:0]i_bus,
 
     //output
-    output [7:0]o_w_bus,
+    output reg [7:0]o_bus,
     output [7:0]o_Reg_out
 
     );
+    reg [7:0] reg_a = 8'hFF;
+        
+    always @(posedge i_clk or posedge i_rst) begin
+        if (i_rst == 1'b1)begin
+            reg_a <= 8'b0;
+        end else begin
+            if (i_load == 1'b1)begin
+                reg_a <= i_bus;
+            end
+            if (i_en == 1'b1)begin
+                o_bus <= reg_a;
+            end
+        end 
+        
+    end
+
+    assign o_Reg_out = reg_a;
+    
 endmodule
