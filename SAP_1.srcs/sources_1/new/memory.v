@@ -30,7 +30,7 @@ module memory(
     //outputs
     output [7:0] o_bus
     );
-
+   
     initial begin
         $readmemh("program.mem",r_ram);
     end

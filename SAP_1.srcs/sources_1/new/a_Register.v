@@ -24,12 +24,10 @@ module a_Register(
     //inputs
     input i_clk,
     input i_rst,
-    input i_en,
     input i_load,
     input [7:0]i_bus,
 
     //output
-    output reg [7:0]o_bus,
     output [7:0]o_Reg_out
 
     );
@@ -44,10 +42,7 @@ module a_Register(
             if (i_load == 1'b1)begin
                 reg_a <= i_bus;
             end
-            //if enable is high output the contents of reg_a onto w_bus
-            if (i_en == 1'b1)begin
-                o_bus <= reg_a;
-            end
+            
         end 
         
     end
@@ -59,10 +54,8 @@ module a_Register(
     // a_Register(
     //     .i_clk(),
     //     .i_rst(),
-    //     .i_en(),
     //     .i_load(),
     //     .i_bus(),
-    //     .o_bus(),
     //     .o_Reg_out()
     // )
 
